@@ -1,4 +1,3 @@
-import 'dart:typed_data';
 import 'dart:ui' as lib_ui;
 
 import 'package:driver/domain/entities/location_model.dart';
@@ -40,10 +39,8 @@ class HomeController with ChangeNotifier {
   void markerDriver() {
     Marker? marker = markers![const MarkerId("id_marker")];
     createMarker("assets/icons/pin.png").then((pinMarker) {
-      print('ingreso 1');
 
       if (marker == null) {
-        print('ingreso 2');
         markers![const MarkerId("id_marker")] = Marker(
           markerId: const MarkerId("id_marker"),
           position: LatLng(mapPosition!.latitude, mapPosition!.longitude),

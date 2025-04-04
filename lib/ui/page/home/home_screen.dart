@@ -9,7 +9,6 @@ import 'package:driver/ui/page/home/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -79,7 +78,6 @@ class InfoDriver extends StatelessWidget {
                     Expanded(child: WidgetTextTitle(title: "Información del viaje")),
                     InkWell(
                       onTap: () {
-                        print('ronny ingreso 1');
                         context.read<HomeController>().isOpenCard =
                             !context.read<HomeController>().isOpenCard;
                       },
