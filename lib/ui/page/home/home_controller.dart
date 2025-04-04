@@ -13,8 +13,6 @@ class HomeController with ChangeNotifier {
   Map<MarkerId, Marker>? markers = {};
   bool? _isOpenCard = false;
 
-
-
   bool get isOpenCard => _isOpenCard!;
 
   set isOpenCard(bool value) {
