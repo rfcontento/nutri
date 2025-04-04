@@ -23,18 +23,26 @@ class LoginScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          WidgetTextTitle(title: "Bienvenido", size: 24),
-          WidgetTextSubTitle(title: "Ingresa tu contraseña para acceder a tu cuenta"),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image(image: AssetImage("assets/icons/cow.png"), width: 100,),
+            ],
+          ),
+          WidgetTextTitle(title: "Iniciar sesión", size: 24),
+          WidgetTextSubTitle(title: "¡Introduce tu email y contraseña para iniciar sesión!"),
+          WidgetTextTitle(title: "Correo electrónico"),
           WidgetFormField(
-            hint: "Ingrese el usuario",
+            hint: "info@gmail.com",
             controller: loginController.userController,
           ),
+          WidgetTextTitle(title: "Contraseña"),
           WidgetFormField(
             hint: "Ingrese su contraseña",
             controller: loginController.passwordController,
           ),
           WidgetButton(
-            text: "Acceder",
+            text: "Iniciar sesión",
             onPressed: () {
               GlobalFunction().nextPageViewTransition(context, HomeScreen());
             },
