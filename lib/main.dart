@@ -5,8 +5,6 @@ import 'package:driver/ui/routes/route_provider.dart';
 import 'package:driver/ui/util/device_info_id.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:traccar_flutter/entity/traccar_configs.dart';
-import 'package:traccar_flutter/traccar_flutter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

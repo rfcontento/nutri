@@ -24,7 +24,7 @@ Future<void> initConfigTracking() async {
     final configs = TraccarConfigs(
       deviceId: deviceId,
       serverUrl: 'http://24.144.100.79:8082/',
-      interval: 10000, // Enviar actualizaciones cada 15 segundos
+      interval: 10000, // Enviar actualizaciones cada 10 segundos
       distance: 10, // Enviar actualizaciones tras un desplazamiento de 10 metros
       angle: 30, // Enviar actualizaciones al cambiar de dirección 30 grados
       accuracy: AccuracyLevel.high, // Usar modo de alta precisión
@@ -33,6 +33,7 @@ Future<void> initConfigTracking() async {
       notificationIcon: 'custom_icon', // Icono de notificación opcional
     );
     await traccar.setConfigs(configs);
+    print('ronny ingreso $configs');
     await traccar.startService();
   } else {
     print('No se pudo obtener el Device ID.');
